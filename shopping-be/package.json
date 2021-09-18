@@ -1,0 +1,56 @@
+{
+  "name": "easybuy-be",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./dist/bin/server",
+    "serve": "node ./dist/bin/server",
+    "transpile": "babel ./server --out-dir dist",
+    "build": "npm-run-all clean transpile",
+    "watch:dev": "nodemon",
+    "clean": "rimraf dist",
+    "dev": "NODE_ENV=development npm-run-all build serve",
+    "prod": "NODE_ENV=production npm-run-all build serve"
+  },
+  "dependencies": {
+    "@babel/cli": "^7.13.14",
+    "@babel/core": "^7.13.14",
+    "@babel/preset-env": "^7.13.12",
+    "@sendgrid/mail": "^7.4.5",
+    "babel-preset-env": "^1.7.0",
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.21",
+    "mongoose": "^5.13.5",
+    "morgan": "^1.9.1",
+    "nodemon": "^2.0.7",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^3.0.2",
+    "validator": "^13.5.2"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ],
+    "plugins": [
+      "@babel/plugin-transform-runtime"
+    ]
+  },
+  "nodemonConfig": {
+    "env": {
+      "DB_PASSWORD": "test"
+    },
+    "exec": "npm run dev",
+    "watch": [
+      "server/*"
+    ],
+    "ignore": []
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-runtime": "^7.13.15"
+  }
+}

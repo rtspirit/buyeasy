@@ -1,0 +1,42 @@
+.home-image {
+    max-height: 250px;
+    min-height: 250px;
+    width: auto;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.shopping-cart-img {
+    max-width: 350px;
+    height: auto;
+}
+
+.product-desc-image {
+    max-height: 500px;
+    width: auto;
+}
+
+.bg {
+    min-height: 100vh;
+    background-color: #f8f9fa;
+}
+
+.carousel-control-prev {
+    background-color: #6c757d;
+}
+
+.carousel-control-next{
+    background-color: #6c757d;
+}
+
+.noItemsInBag {
+    height: 500px;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+
